@@ -36,31 +36,42 @@ class datasetOrbit:
 
     def datasetPlotStyle(self, background_color):
 
+        # Grafik stili ayarlama
         self.plt.style.use(background_color)
 
+        # Arka plan rengini ayarlama
         self.ax.set_facecolor(self.face_color)
         self.fig.patch.set_facecolor(self.face_color)
 
-        self.ax.xaxis.set_pane_color(self.pane_color)
-        self.ax.yaxis.set_pane_color(self.pane_color)
-        self.ax.zaxis.set_pane_color(self.pane_color)
+        # Pane rengini kontrol etme ve ayarlama
+        if len(self.pane_color) == 3:  # Eğer RGB formatında ise
+            self.pane_color = self.pane_color + (1,)  # Alfa değeri olarak 1 ekle
 
-        self.ax.xaxis._axinfo["grid"]['color'] =  self.grid_color
-        self.ax.yaxis._axinfo["grid"]['color'] =  self.grid_color
-        self.ax.zaxis._axinfo["grid"]['color'] =  self.grid_color
+        try:
+            # Eksen pane renklerini ayarlama
+            self.ax.xaxis.set_pane_color(self.pane_color)
+            self.ax.yaxis.set_pane_color(self.pane_color)
+            self.ax.zaxis.set_pane_color(self.pane_color)
+        except Exception as e:
+            print(f"Pane rengi ayarlarken hata oluştu: {e}")
 
-        #text and label color
+        # Izgara rengini ayarlama
+        self.ax.xaxis._axinfo["grid"]['color'] = self.grid_color
+        self.ax.yaxis._axinfo["grid"]['color'] = self.grid_color
+        self.ax.zaxis._axinfo["grid"]['color'] = self.grid_color
+
+        # Metin ve etiket renklerini ayarlama
         self.ax.xaxis.label.set_color(self.label_color)
         self.ax.yaxis.label.set_color(self.label_color)
         self.ax.zaxis.label.set_color(self.label_color)
 
+        # Eksen işaret renklerini ayarlama
         self.ax.tick_params(axis='x', colors=self.tick_color)
         self.ax.tick_params(axis='y', colors=self.tick_color)
         self.ax.tick_params(axis='z', colors=self.tick_color)
-        
 
+        # Saydamlığı ayarlama
         self.alpha = self.orbit_transparency
-
 
 
     def datasetCalculateOrbit(self, plot_steps, n_orbits, data=None, 
