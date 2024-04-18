@@ -373,7 +373,7 @@ st.sidebar.image(sidebar_image, use_column_width=True)
 if selected_page == "Hosgeldiniz":
     st.title('Hoşgeldiniz!')
     # Yolu görselin bulunduğu yere göre ayarla
-    image_path = "InsterstellarProject/asteroid/Images/astronotlar.jpeg"
+    image_path = "Images/astronotlar.jpeg"
 
     # Sütunlar oluştur
     col1, col2, col3 = st.columns([1, 6, 1])
