@@ -63,12 +63,10 @@ def get_data(processed, sample_size=None):
                                         errors='coerce')  # diameter sütununu sayısal bir türe dönüştürme
 
     elif processed == 4:
+        data_completed['name'] = data_completed['name'].apply(lambda x: ''.join(random.choices(string.ascii_letters, k=5)) if pd.isnull(x) else x)
+
         data_completed['diameter'] = pd.to_numeric(data_completed['diameter'],
                                         errors='coerce')  # diameter sütununu sayısal bir türe dönüştürme
-
-
-
-
         return data_completed
 
     elif processed == 5:
