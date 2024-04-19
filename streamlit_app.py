@@ -576,9 +576,9 @@ elif selected_page == "Gunes ve Asteroidler":
 
             # Görselleştirme ve animasyonu yeniden oluştur
             test.fileName("sample.csv")
-            test.datasetCalculateOrbit(plot_steps=50, n_orbits=6, color="yellow", random_color=True, trajectory=True,
+            test.datasetCalculateOrbit(plot_steps=100, n_orbits=6, color="yellow", random_color=True, trajectory=True,
                                     sun=True, delimiter=",")
-            test.datasetAnimateOrbit(dpi=50, save=True, export_zoom=3, font_size="xx-small")
+            test.datasetAnimateOrbit(dpi=150, save=True, export_zoom=3, font_size="xx-small")
 
             # Animasyonu Streamlit'te göster
             file_path = "Asteroid-orbit.gif"
