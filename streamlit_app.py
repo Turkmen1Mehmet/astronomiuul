@@ -320,7 +320,7 @@ def refresh_data():
 def get_sidebar_image(page):
     if page == "Hosgeldiniz":
         return "Images/astronotlar.jpeg"
-    elif page == "Veriseti Hikayesi":
+    elif page == "Veri seti Hikayesi":
         return "Images/asteroid.jpeg"
     elif page == "Simulation":
         return "Images/sidebar.jpeg"
@@ -362,7 +362,7 @@ def cemberde_krater_ciz(dunya_cap_km, krater_yaricap_km):
 # Define layout
 st.sidebar.title('AstronoMiuul')
 
-selected_page = st.sidebar.radio("Menu", ["Hosgeldiniz", "Veriseti Hikayesi" , "Simulation", "Krater Alan", "Diameter Tahmini", "Gunes ve Asteroidler", "RFM-ALTV"])
+selected_page = st.sidebar.radio("Menu", ["Hosgeldiniz", "Veri seti Hikayesi" , "Simulation", "Krater Alan", "Diameter Tahmini", "Gunes ve Asteroidler", "RFM-ALTV"])
 sidebar_image = get_sidebar_image(selected_page)
 st.sidebar.image(sidebar_image, use_column_width=True)
 
@@ -395,8 +395,8 @@ if selected_page == "Hosgeldiniz":
 
 
 # Dataset Story Tab
-elif selected_page == "Veriseti Hikayesi":
-    st.title('NASA Veriseti Hikayesi')
+elif selected_page == "Veri seti Hikayesi":
+    st.title('NASA Veri seti Hikayesi')
     st.write("")
     st.write("NASA'ya bağlı California Institute of Technology Jet Propulsion Laboratory tarafından oluşturulan resmi veri seti kullanıldı. ")
     veri_seti_detay = get_data(processed=1)
