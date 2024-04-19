@@ -362,7 +362,7 @@ def cemberde_krater_ciz(dunya_cap_km, krater_yaricap_km):
 # Define layout
 st.sidebar.title('AstronoMiuul')
 
-selected_page = st.sidebar.radio("Menu", ["Hos geldiniz", "Veri seti Hikayesi" , "Simulation", "Krater Alan", "Diameter Tahmini", "Gunes ve Asteroidler", "RFM-ALTV"])
+selected_page = st.sidebar.radio("Menu", ["Hos geldiniz", "Veri seti Hikayesi" , "Simülasyon", "Krater Alan", "Diameter Tahmini", "Gunes ve Asteroidler", "RFM-ALTV"])
 sidebar_image = get_sidebar_image(selected_page)
 st.sidebar.image(sidebar_image, use_column_width=True)
 
