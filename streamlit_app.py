@@ -322,7 +322,7 @@ def get_sidebar_image(page):
         return "Images/astronotlar.jpeg"
     elif page == "Veri seti Hikayesi":
         return "Images/asteroid.jpeg"
-    elif page == "Simulation":
+    elif page == "Simülasyon":
         return "Images/sidebar.jpeg"
     elif page == "Krater Alan":
         return "Images/krater-photo.jpeg"
