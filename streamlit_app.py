@@ -369,7 +369,7 @@ st.sidebar.image(sidebar_image, use_column_width=True)
 
 # Welcome Tab
 if selected_page == "Hos geldiniz":
-    st.title('Hoşgeldiniz!')
+    st.title('Hoş geldiniz!')
     # Yolu görselin bulunduğu yere göre ayarla
     image_path = "Images/astronotlar.jpeg"
 
