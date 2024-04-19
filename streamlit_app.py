@@ -653,7 +653,7 @@ elif selected_page == "RFM-ALTV" : # Örnek olarak RFM-ALTV sayfasını seçtim
     #st.write("RFM Skorları:")
     #st.dataframe(df_score[['name', 'frequency_score', 'recency_score', 'monetary_score', 'rfm_score', 'Broad_Segment']].head(5))
 
-    st.write("RFM En Maden Potansiyelleri:")
+    st.write("RFM Yüksek Maden Potansiyelli Asteroidler:")
     sorted_df = df_score[
         ['name', 'frequency_score', 'recency_score', 'monetary_score', 'rfm_score', 'Broad_Segment']].sort_values(
         by='rfm_score', ascending=False)
