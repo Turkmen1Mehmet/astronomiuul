@@ -318,7 +318,7 @@ def refresh_data():
     st.markdown(centered_html, unsafe_allow_html=True)
 
 def get_sidebar_image(page):
-    if page == "Hosgeldiniz":
+    if page == "Hos geldiniz":
         return "Images/astronotlar.jpeg"
     elif page == "Veri seti Hikayesi":
         return "Images/asteroid.jpeg"
@@ -362,13 +362,13 @@ def cemberde_krater_ciz(dunya_cap_km, krater_yaricap_km):
 # Define layout
 st.sidebar.title('AstronoMiuul')
 
-selected_page = st.sidebar.radio("Menu", ["Hosgeldiniz", "Veri seti Hikayesi" , "Simulation", "Krater Alan", "Diameter Tahmini", "Gunes ve Asteroidler", "RFM-ALTV"])
+selected_page = st.sidebar.radio("Menu", ["Hos geldiniz", "Veri seti Hikayesi" , "Simulation", "Krater Alan", "Diameter Tahmini", "Gunes ve Asteroidler", "RFM-ALTV"])
 sidebar_image = get_sidebar_image(selected_page)
 st.sidebar.image(sidebar_image, use_column_width=True)
 
 
 # Welcome Tab
-if selected_page == "Hosgeldiniz":
+if selected_page == "Hos geldiniz":
     st.title('Hoşgeldiniz!')
     # Yolu görselin bulunduğu yere göre ayarla
     image_path = "Images/astronotlar.jpeg"
@@ -413,7 +413,7 @@ elif selected_page == "Veri seti Hikayesi":
 
 
 # Asteroid Impact Scenarios Tab
-elif selected_page == "Simulation":
+elif selected_page == "Simülasyon":
     st.title('Asteroid Çarpma Senaryoları')
     st.write("""
     - **Küçük Asteroidler**: Atmosfere giriş sağladıklarında yanarak küçülür ve daha zararsız hale gelirler.
@@ -422,9 +422,9 @@ elif selected_page == "Simulation":
     #burayı sil ve aşağıda argüman df_sim sil
     df_sim = get_data(processed=4)
     # Simülasyon başlatma butonu
-    st.session_state['active_page'] = 'Simulation'
-    if st.session_state['active_page'] == 'Simulation':
-        simulation_page = CustomPage("Simulation")
+    st.session_state['active_page'] = 'Simülasyon'
+    if st.session_state['active_page'] == 'Simülasyon':
+        simulation_page = CustomPage("Simülasyon")
         asteroid_orbit_simulation(simulation_page,df_sim)
 
 
