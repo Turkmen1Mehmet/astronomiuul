@@ -137,7 +137,7 @@ class datasetOrbit:
                             else:
                                 self.color = color
 
-                        self.ax.set_aspect('auto')
+                        self.ax.set_aspect('equal')
 
                         
 
@@ -200,7 +200,7 @@ class datasetOrbit:
                                 else:
                                     self.color = color
 
-                            self.ax.set_aspect('auto')
+                            self.ax.set_aspect('equal')
 
                             
 
@@ -261,7 +261,7 @@ class datasetOrbit:
                             else:
                                 self.color = color
 
-                        self.ax.set_aspect('auto')
+                        self.ax.set_aspect('equal')
 
                         
 
