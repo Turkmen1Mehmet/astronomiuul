@@ -1,4 +1,4 @@
-# Try:https://astronomiuul.streamlit.app/
+# Try: https://astronomiuul.streamlit.app/
 
 
 # AstronoMiuul 👩
